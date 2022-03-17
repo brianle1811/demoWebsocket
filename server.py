@@ -1,4 +1,3 @@
-# Importing the relevant libraries
 import websockets
 import asyncio
 
@@ -11,7 +10,7 @@ async def echo(websocket, path):
     try:
         async for message in websocket:
             print("Received message from client: " + message)
-            await websocket.send("Server respone: " + message + "copy")
+            await websocket.send("Server respone: Hello client!")
     except websockets.exceptions.ConnectionClosed as e:
         print("A client just disconnected")
 
